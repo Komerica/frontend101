@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Window-load</title>
+    <!-- ↓ ↓ 🟥 script 실행되는 순서! 🟥 ↓ ↓ -->
+    <!-- 🟩 1. defer -->
+    <!--      : html 이 전부 parsing(분석) 된 이후에 DOMContentLoaded 이벤트 발생 이전에 defer 옵션이 출력됨! -->
+    <script src="6window-load.js" defer></script>
+
+</head>
+<body>
+
+<script>
+    // 🟩 2. DOMContentLoaded
+    //   : HTML(document)만 로드가 완료됐을때 호출
+    //     js 파일이 resources(css, images, font 등)에 대해서 뭔가를 수행하지 않는 이상,
+    //     DOMContentLoaded 안에서 동작을 수행하는 것이 사용자가 볼 수 있음!
+    window.addEventListener('DOMContentLoaded', () => {
+        console.log('DOMContentLoaded');
+    });
+    // 🟩 3. load
+    //   : 페이지가 로드가 됐을때, 즉 모든 resources(css, images, font)들이 다운이 완료됐을때 호출
+    window.addEventListener('load', () => {
+        console.log('load');
+    });
+    // 🟩 beforeunload
+    //   : 사용자가 페이지를 나가기 전에 보여지는 함수
+    window.addEventListener('beforeunload', () => {
+        console.log('beforeunload');
+    });
+    // 🟩 unload
+    //   : 페이지가 unload 되었을때, 즉, resource(css, images, font 등)들이 unload 가 되었을때
+    window.addEventListener('unload', () => {
+        console.log('unload');
+    });
+</script>
+</body>
+</html>

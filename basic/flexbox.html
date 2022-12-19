@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, html {
+            height: 100%;
+        }
+        .box {
+            background-color: beige;
+            height: 100%;
+            /* height: 100vh; */
+            /* 🟩 vh: 부모에 상관없이 viewport(보이는곳)의 100%로 하고 싶으면 100vh(viewport height) */
+            display: flex;
+            /* flex-direction: row;
+            flex-wrap: wrap-reverse; */
+            /* ↑ ↓ 위 두줄과 아래 한줄 같음! */
+            flex-flow: row wrap-reverse;    /* flex-direction + flex-wrap = flex-flow */
+            justify-content: space-around;  /* main axis의 아이템의 정렬(오른쪽/왼쪽/중간정렬) - 아이템의 순서는 유지! */
+            align-items: baseline;          /* cross axis의 아이템의 정렬! */
+            align-content: space-around;    /* cross axis의 아이템의 정렬! */
+        }
+        .item {
+            width: 40px;
+            height: 40px;
+            border: 1px solid black;
+        }
+        .item1 {
+            background-color: #ef9a9a;
+            padding: 20px;
+            align-self: center;     /* 하나의 아이템만 정렬하고 싶을때! */
+        }
+        .item2 {
+            background-color: #f48fb1;
+            flex-grow: 1;   /* 아이템이 커질때 몇의 비율로 더 커져야하는가 */
+            flex-shrink: 2; /* 아이템이 최소로 작아졌을때 몇의 비율로 더 작아져야하는가  */
+            /* flex-basis: 60%; */ /* flex-grow + flex-shrink 를 안쓰고 이걸로 해결보는 것 같음 */
+        }
+        .item3 {
+            background-color: #ce93d8;
+            flex-grow: 1;
+            flex-shrink: 1;
+            /* flex-basis: 30%; */ /* flex-grow + flex-shrink 를 안쓰고 이걸로 해결보는 것 같음 */
+        }
+        .item4 {
+            background-color: #b39ddb;
+            flex-grow: 1;
+            flex-shrink: 1;
+            /* flex-basis: 10%; */ /* flex-grow + flex-shrink 를 안쓰고 이걸로 해결보는 것 같음 */
+        }
+        .item5 {
+            background-color: #90caf9;
+        }
+        .item6 {
+            background-color: #a5d6a7;
+        }
+        .item7 {
+            background-color: #e6ee9c;
+        }
+        .item8 {
+            background-color: #ef9a9a;
+        }
+        .item9 {
+            background-color: #ef9a9a;
+        }
+        .item10 {
+            background-color: #ef9a9a;
+        }
+        
+    </style>
+    <script defer src="js-concept.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+        <div class="item item7">7</div>
+        <div class="item item8">8</div>
+        <div class="item item9">9</div>
+        <div class="item item10">10</div>
+        <div class="item item1">11</div>
+        <div class="item item2">12</div>
+        <div class="item item3">13</div>
+        <div class="item item4">14</div>
+        <div class="item item5">15</div>
+        <div class="item item6">16</div>
+        <div class="item item7">17</div>
+        <div class="item item8">18</div>
+        <div class="item item9">19</div>
+        <div class="item item10">20</div>
+        <div class="item item1">21</div>
+        <div class="item item2">22</div>
+        <div class="item item3">23</div>
+        <div class="item item4">24</div>
+        <div class="item item5">25</div>
+        <div class="item item6">26</div>
+        <div class="item item7">27</div>
+        <div class="item item8">28</div>
+        <div class="item item9">29</div>
+        <div class="item item10">30</div>
+    </div>
+
+    🟩 emmet
+    div>header>ul>(li>a)*2^^footer>p
+    div>(header>ul>li*2>a)+footer>p
+
+    🟩 p>lorem4
+    <p>Lorem ipsum dolor sit.</p>
+    
+</body>
+</html>

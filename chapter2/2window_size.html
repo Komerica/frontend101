@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Window Size</title>
+    <style>
+        .tag {
+            display: inline-block;
+            background-color: thistle;
+            padding: 16px;
+            margin-top: 16px;
+            font-size: 48px;
+        }
+    </style>
+</head>
+<body>
+<div class="tag"></div>
+<!--
+ 🟩 window.screen
+  : 모니터의 해상도, 즉, 브라우저 바깥에 있는 아이들까지 다합한 모니터 사이즈를 말하는 것!
+ 🟩 window.outer
+  : URL, 탭을 포함한 브라우저의 전체적인 사이즈
+ 🟩 window.inner
+  : 스크롤바가 있으면 그 스크롤바 전체를 포함한 웹페이지
+ 🟩 document.documentElement.clientWidth
+  : 스크롤바를 제외한 스크린!
+-->
+<script>
+    const tag = document.querySelector('.tag');
+    function updateTag() {
+        tag.innerHTML = `
+            window.screen: ${window.screen.width}, ${window.screen.height} <br/>
+            window.outer: ${window.outerWidth}, ${window.outerHeight} <br/>
+            window.inner: ${window.innerWidth}, ${window.innerHeight} <br/>
+            document.documentElement.clientWidth: ${document.documentElement.clientWidth}, ${document.documentElement.clientHeight}
+        `;
+    }
+    window.addEventListener('resize', () => {
+        updateTag();
+    });
+    updateTag();
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Client & Page X, Y</title>
+    <style>
+        body {
+            /*overflow: hidden;   !* 컨텐츠 내용이 window 보다 벗어나게 되면 보이지 않게 만드는 것! *!*/
+        }
+        .box {
+            background-color: thistle;
+            width: 200px;
+            height: 200px;
+            margin: 10px 10px 10px 100px;
+            border-radius: 4px;
+        }
+
+        .special {
+            background-color: #a5d6a7;
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box special"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+
+
+<script>
+    const special = document.querySelector('.special');
+    special.addEventListener('click', (event) => {
+        const rect = special.getBoundingClientRect();
+        console.log(rect);
+        console.log(`client: ${event.clientX}, ${event.clientY}`);
+        console.log(`page: ${event.pageX}, ${event.pageY}`);
+    });
+</script>
+</body>
+</html>

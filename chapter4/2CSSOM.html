@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<!--
+https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model - CSSOM
+
+🟩 CSSOM (CSS Object Model)
+
+브라우저에서 html 파일을 분석하게 되면 html 에 있는 요소들을 DOM(Document Object Model)로 변환됨.
+여기서 우리가 정의한 CSS 는 DOM 과 합쳐져서 CSSOM 이 됨.
+즉, DOM + CSS = CSSOM
+=> 그래서 여기서는 CSS Style 은 브라우저가 어떻게 이해하는지 알아볼 것임!
+
+1. 브라우저가 html 파일을 읽게 되면 DOM(Document Object Model Tree)를 만들게 됨.
+2. 그 다음, CSS 파일을 읽은 다음, CSSOM(DOM + CSS) 을 만든다!
+3. 그 다음, DOM + CSSOM 을 해서 최종적으로 브라우저에서 표기되는 것들만 선별된 Render Tree 를 만듬
+
+🟩 DOM
+                    html
+                   ↗    ↖
+              head       body
+           ↗  ↑   ↖        ↑   ↖
+      meta  title link  section span
+                        ↗  ↑  ↖     ↖
+                    img   h1   h3   TextNode
+                           ↑    ↑
+                      TextNode  TextNode
+🟩 CSSOM
+                    html
+                        ↖
+                         body
+                            ↑   ↖
+                         section span
+                           ↑  ↖
+                          h1   h3
+🟩 Render Tree
+                    html
+                        ↖
+                         body
+                           ↑   ↖
+                        section span
+                        ↗  ↑  ↖
+                    img   h1   h3
+                           ↑    ↑
+                      TextNode  TextNode
+
+-->

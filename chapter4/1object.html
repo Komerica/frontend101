@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<!--
+✔ html 파일을 브라우저에서 읽게 되면
+  각각의 tag 들을 브라우저에서 분석해서
+  이것들을 Node 로 변환하게 된다!
+  여기서 Node 는 브라우저가 이해할 수 있는 자신들만의 object 임!
+  다시 말해, html 파일에서 쓰인 tag 가 JS 에서는 Node 라는 object 로 변환이 됨!
+  그리고, 당연히 이 Node 의 object 안에는 우리가 tag 안에 작성했었던 class, text 등 모든 정보를 갖고 있음!
+/////////////////////////////////////////////////////////////////////////////////////////////
+🟥 DOM tree(Document Object Model) 🟥
+https://www.w3schools.com/js/js_htmldom.asp
+https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
+
+🟥 BOM tree(Browser Object Model) 🟥
+https://javascript.info/browser-environment
+
+↓ ↓ https://www.w3docs.com/learn-javascript/node-properties-type-tag-and-contents.html - 꼭 참고!!
+ 🟥 상속관계(Inheritance) 🟥
+                   EventTarget
+                       ↑
+                      Node
+                   ↗   ↑   ↖
+           Document Element Text ...
+                       ↑
+                   HTMLElement ...
+                ↗      ↑       ↖
+HTMLInputElement  HTMLDivElement HTMLAnchorElement ...
+<input type="..">    <div>         <a href="..">
+
+
+// : Node 라는 object 는 EventTarget 이라는 object 를 상속한다!
+//   즉, Node 라는 object 는 EventTarget 의 object 라는 것을 알 수 있음.
+//   다시 말해, 모든 Node 는 Event 가 발생할 수 있다!
+-->
+</body>
+</html>

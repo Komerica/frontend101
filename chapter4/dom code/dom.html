@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      body {
+        background-color: black;
+        text-align: center;
+      }
+      section {
+        width: 50%;
+        margin: 50px auto;
+        background-color: brown;
+        border-radius: 20px;
+        padding: 20px;
+      }
+      img {
+        z-index: 100;
+        will-change: opacity;
+      }
+      h1,
+      h3,
+      span {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <img src="img/avatar.png" alt="avatar" />
+      <h1 id="brand">Dream Coding</h1>
+      <!-- hello comment -->
+      <h3>Don't forget to code your dream</h3>
+    </section>
+    <span>Hello World!</span>
+  </body>
+</html>
+
+<!--
+🟩 $0.childNodes 🟩
+  element(요소)에서 section 선택후 console(콘솔)로 가서
+  $0.childNodes 를 하면 section 안에 들어 있는 Nodes 를 모두 보여준다 ↓ ↓
+  ✔ NodeList(9) [text, img, text, h1#brand, text, comment, text, h3, text]
+    => So, html 에 있는 모든 것들이 변환돼서 들어온다.
+🟩 $0.nextSibling 🟩
+  element(요소)에서 section 선택후 console(콘솔)로 가서
+  $0.nextSibling 를 하면 section 다음에 오는 것은 무엇인지 보여줌 ↓ ↓
+  section 태그 다음에 enter 키를 쳐서 다음 img 태그를 입력했다.
+  그러므로 ✔ #text(enter)를 보여줌!
+  enter 는 #text 로 카운트 됨!
+🟩 $0.parentNode 🟩
+  element(요소)에서 section 선택후 console(콘솔)로 가서 $0.parentNode 치면 ↓ ↓
+  ✔ <body>...</body>
+🟩 $0.nodeName 🟩
+  element(요소)에서 section 선택후 console(콘솔)로 가서 $0.nodeName 치면 ↓ ↓
+  ✔ 'SECTION'
+🟩 $0.nodeType 🟩
+  element(요소)에서 section 선택후 console(콘솔)로 가서 $0.nodeType 치면 ↓ ↓
+  ✔ 1
+🟩 $0.nodeValue 🟩
+  element(요소)에서 section 선택후 console(콘솔)로 가서 $0.nodeValue 치면 ↓ ↓
+  ✔ null
+
+🟥 모든 Node 는 EventTarget 이고
+   Node 에는 html 부터 시작해서 다양한 요소들이 존재함!
+
+-->

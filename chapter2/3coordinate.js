@@ -1,4 +1,4 @@
-// 🟩 coordinates (좌표)
+// 🟩 coordinates_advanced (좌표)
 //    ✔ Element.getBoundingClientRect()
 //      * top: 브라우저 제일 위에서 요소의 상단부분까지 얼마나 떨어져있는가
 //      * left: 브라우저 제일 왼쪽에서 요소의 왼쪽부분까지 얼마나 떨어져있는가

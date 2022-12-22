@@ -27,9 +27,9 @@
   -> painting
 🟥 정리하자면,
     requests/response -> loading -> scripting -> rendering -> layout -> painting
-    DOM    ==>    CSSOM    ==>   RenderTree   -> layout ==> paint ==> composition
+    DOM    ==>    CSSOM    ==>   RenderTree   -> layout ==> paint ==> composition(Composite)
     ============= Construction ============== -> ========== Operation ===========
-                                                                      Composition 만 발생하면 가장 BEST!
+                                                                      Composition(Composite) 만 발생하면 가장 BEST!
                                                                         => Why? 이미 그러져있는 layers 를 움직이거나 변형만 하면됨!
                                                                       paint 까지도 okay..
                                                                         => 작은 layer 든, 큰 layer 든, paint 를 다시 준비해야돼서 시간이 걸리고 메모리에 부담이 될 수 있음

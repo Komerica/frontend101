@@ -1,7 +1,7 @@
 const horizontal = document.querySelector('.horizontal');
 const vertical = document.querySelector('.vertical');
 const target_img = document.querySelector('.target-img');
-const coordinates = document.querySelector('.coordinates');
+const coordinates = document.querySelector('.coordinates_advanced');
 const targetRect = target_img.getBoundingClientRect();
 const targetHalfWidth = targetRect.width / 2;
 const targetHalfHeight = targetRect.height / 2;
@@ -22,7 +22,7 @@ document.addEventListener('mousemove', (e) => {
     // target_img.style.left = `${x}px`;
     // target_img.style.top = `${y}px`;
     coordinates.style.transform = `translate(${x + 20}px, ${y + 20}px)`;
-    // coordinates.style.left = `${x}px`;
-    // coordinates.style.top = `${y}px`;
+    // coordinates_advanced.style.left = `${x}px`;
+    // coordinates_advanced.style.top = `${y}px`;
     coordinates.innerHTML = `${x}, ${y}`
 });
